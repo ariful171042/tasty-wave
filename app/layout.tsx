@@ -1,6 +1,6 @@
+import { Rubik } from "next/font/google";
 import Navber from "@/components/Navber";
 import "./globals.css";
-import { Rubik } from "next/font/google";
 import Footer from "@/components/Footer";
 
 const rubik = Rubik({ subsets: ["latin"] });
