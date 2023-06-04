@@ -1,4 +1,9 @@
-const SectionTitle = ({ subtitle, tittle }) => {
+interface SectionTitleProps {
+  subtitle?: string;
+  tittle?: string;
+}
+
+const SectionTitle: React.FC<SectionTitleProps> = ({ subtitle, tittle }) => {
   return (
     <div className="wrapper text-center pb-10 ">
       <span className="uppercase font-semibold tracking-widest text-accent">

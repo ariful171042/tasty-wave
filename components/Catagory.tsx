@@ -7,6 +7,7 @@ import { data } from "@/data/catagoryImages";
 import Image from "next/image";
 import Overlay from "./Overlay";
 import SectionTitle from "./SectionTitle";
+import CatagorySliderItem from "./CatagorySliderItem";
 
 const Catagory = () => {
   return (
@@ -33,20 +34,11 @@ const Catagory = () => {
         >
           {data.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="w-full h-full relative">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={500}
-                  height={500}
-                  priority
-                  className="w-full h-full object-cover "
-                />
-                <Overlay />
-                <div className="z-[3] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                  <h3 className="text-5xl font-semibold">{item.name}</h3>
-                </div>
-              </div>
+              <CatagorySliderItem
+                name={item.name}
+                image={item.src}
+                alt={item.alt}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
